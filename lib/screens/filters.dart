@@ -10,10 +10,10 @@ class FiltersScreen extends StatefulWidget {
 }
 
 class _FilterScreenState extends State<FiltersScreen> {
+  var _glutenFreeFilterSet = false;
+
   @override
   Widget build(BuildContext context) {
-    var _glutenFreeFilterSet = false;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Your Filters'),
@@ -28,17 +28,16 @@ class _FilterScreenState extends State<FiltersScreen> {
           },
           title: Text(
             'Gluten-free',
-            style: Theme.of(context)
-                .textTheme
-                .titleLarge!
-                .copyWith(color: Theme.of(context).colorScheme.onBackground),
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  color: Theme.of(context).colorScheme.primary,
+                  fontWeight: FontWeight.bold,
+                ),
           ),
           subtitle: Text(
             'Only include gluten-free meals.',
-            style: Theme.of(context)
-                .textTheme
-                .titleLarge!
-                .copyWith(color: Theme.of(context).colorScheme.onBackground),
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                color: Theme.of(context).colorScheme.onBackground,
+                fontSize: 18),
           ),
           activeColor: Theme.of(context).colorScheme.tertiary,
           contentPadding: const EdgeInsets.only(left: 34, right: 22),
