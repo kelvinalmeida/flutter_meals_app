@@ -62,11 +62,13 @@ class MailItem extends StatelessWidget {
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
+                        // backgroundColor: Colors.amberAccent,
                       ),
                     ),
                     const SizedBox(height: 12),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         MeilItemTrait(
                           icon: Icons.schedule,
@@ -76,14 +78,14 @@ class MailItem extends StatelessWidget {
                           width: 12,
                         ),
                         MeilItemTrait(
-                          icon: Icons.schedule,
+                          icon: Icons.work,
                           label: complexityText,
                         ),
                         const SizedBox(
                           width: 12,
                         ),
                         MeilItemTrait(
-                          icon: Icons.schedule,
+                          icon: Icons.attach_money,
                           label: affordabilityText,
                         ),
                       ],
